@@ -1,0 +1,24 @@
+<header>
+    <h1>Travel Guide</h1>
+    <nav>
+        <ul>
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/registration">Registration</a></li>
+            <li><a routerLink="/login">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="tour-guide">
+    <h2>Explore Our Destinations</h2>
+    <div class="places-container">
+        <div class="place" *ngFor="let place of places">
+            <img [src]="place.image" [alt]="place.name">
+            <div class="place-info">
+                <h3>{{ place.name }}</h3>
+                <p>Cost: {{ place.cost }}</p>
+                <p>Duration: {{ place.duration }}</p>
+            </div>
+        </div>
+    </div>
+</section>
